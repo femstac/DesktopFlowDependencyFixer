@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="DesktopFlowDependencyFixer/DesktopFlowDependencyFixer.csproj" Id="4eb3b048-21d6-41a2-b90a-43ecda0c200b">
+    <BuildType Solution="Release|x64" Project="Debug" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+</Solution>
