@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DesktopFlowDependencyFixer</id>
+    <version>1.0.1</version> 
+    <title>Desktop Flow Dependency Fixer</title>
+    <authors>Oluwafemi Tosin Ajigbayi</authors>
+    <owners>Oluwafemi Tosin Ajigbayi</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/femstac/DesktopFlowDependencyFixer</projectUrl> 
+    <icon>icon.png</icon>
+    <readme>README.md</readme>
+    <license type="file">LICENSE</license>
+    <description>A tool to diagnose and fix missing 'desktopflowbinary' dependencies by moving them to specific solutions.</description>
+    <summary>Fixes dependency errors when deploying Desktop Flows.</summary>
+    <releaseNotes>
+      Initial Release.
+      - Component Type selection (Binary vs Process).
+      - Dynamic environment metadata loading.
+      - Improved UI with SplitContainer layout.
+      - Added Help, instructions and a tooltip that expalins where to find the Component GUID
+    </releaseNotes>
+    <copyright>Copyright 2025</copyright>
+    <tags>XrmToolBox DesktopFlow PowerAutomate ALM</tags>
+    <dependencies>
+      <dependency id="XrmToolBox" version="1.2023.10.67" />
+    </dependencies>
+  </metadata>
+  <files> 
+    <file src="bin\Release\DesktopFlowDependencyFixer.dll" target="lib\net48\plugins" />
+    <file src="icon.png" target="icon.png" />
+    <file src="README.md" target="README.md" />
+    <file src="LICENSE" target="LICENSE" />
+  </files>
+</package>

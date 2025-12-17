@@ -10,11 +10,15 @@ namespace DesktopFlowDependencyFixer
 	[Export(typeof(IXrmToolBoxPlugin))]
 	[ExportMetadata("Name", "Desktop Flow Dependency Fixer")]
 	[ExportMetadata("Description", "Diagnose and fix missing 'desktopflowbinary' dependencies by moving them to specific solutions.")]
-	[ExportMetadata("SmallImageBase64", "")]
-	[ExportMetadata("BigImageBase64", "")]
-	[ExportMetadata("BackgroundColor", "White")]
-	[ExportMetadata("PrimaryFontColor", "Black")]
-	[ExportMetadata("SecondaryFontColor", "Gray")]
+
+	// Colors
+	[ExportMetadata("BackgroundColor", "#FFFFFF")]
+	[ExportMetadata("PrimaryFontColor", "#000000")]
+	[ExportMetadata("SecondaryFontColor", "#808080")]
+
+
+	[ExportMetadata("SmallImageBase64", "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIDSURBVDhPpZLPT1NBEMZn/0FbIx5MTAwHTzQe9GQ8GNTEK948EOMGwkF/gB4VbzQcCBsQjF40okSDwZgQE40hP4qBqAZEjRFEwGrb7vbt293uTtp9EwqYxEl+zZtvZt9Mdwz/a/x/4294E80tD6hWq2i1Wpienh5e1+t1jI2NYX9/n01sbm5yTX5+yWbX5+fnqFarsCxr+J1e8/PzODo6Qrlc5jK/X2Y/m5ubQ7PZRLFY5G1/fx+lUonb/X4/B42NjQ1e8/l8d3J1dYV8Ps/tcrlM0zT6+f1+DA8Po1gscnBwcJBh/BweHqJarXKw2+0y3G63eW21Wuzn+voayWSSg91ul+F+v89rIpHgIPf7/X6YpsnBer3OcL/f57XValHAMAzD4XX72tnZ4TUajXKwXq8z3O12eU0mkxzkfr/fT9M0ONhutxnutVq8JhIJDrLf7/fDNE0O1ut1hrvdLq/JZJKD3O/3+2GaJgebzSbD3W6X10QiwUHu9/v9ME2Tg42Gg9v/5uYmRkZGMDExgVwuh+3tbeTzeYyOjiISiSAcDqOvrw+RSIRBXC4XwuEwBgcH0dPTg3A4zGsiEa/Xi8HBQYTDYQwODiIcDnOw3W4z3Ov1eE0kEhzkarXKwUajwXC32+U1kUhwkPutVouD9Xqd4W63y2sikeAg9/v9fjim+QfD/v4+xsfH0dfXh8HBsJ/BwT709fVhdHQU2WwW2WwWExMTmJ6eHl7X63Wsr69jfX19eP0/4094Ew0MDOwD2J+C4rZc+6YAAAAASUVORK5CYII=")]
+	[ExportMetadata("BigImageBase64", "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABF1BMVEVHcEwkcK5Ll8gGbbwQb7gvkdEQbrgpjc4CabsNcbsOfckkjtMJhtUMarc2k84NbboDbr8Lg9EEb8AekdghkdcRi9gGargDaroDZbcHeMghlNsXkdsGe8wEdMYYh88Pcb0djNInlNcwldYXf8YMcb8QjNkXi9QKhNEEfMsSjNcPfssSgs0niswId8UAbL8AbsAAcMIEhtcChNUDf8/0+PwIidn7/Pzy9fkAc8Xm8PcCfM4Ae80AeMoAdcgBabwNjdr3+/3t8/j9/v0TecFUmsvU5PDg7PQBecsekNYBgdMxltYdfsRgrt5ws90zi8bQ5/NXo9ZQlMbG3Ou51ehard5aqNk9ndeuy+AbhMski89rq9Y8mNJloc31bfpJAAAALnRSTlMABAWHJicVLu5Si1P6LRY72u3qlIjqYpK4ubrt7e6IZGRjPj2W85fb89u5uTvbWVSwsQAAAZhJREFUOMvNk9dSwlAQhokJvQsIdhQLtvRATiohJBB6L+r7P4cbdZREhmv3KjPfv7v/7tkEAv8tDq5yuauDPYJgQRAKwd0sFYbMeIJhEvFAAAun/uSenOav8w8My7L3F88X2SdfndSJruu3AsN0OqzDZTlOevTWCJ/quiAwbHc06nIQknwW9trPfXJnydffZAl4O+Yb5hrqd+b9AUKD/mItt6sVn8k85M9rzVqt0eCNsaIoMU+DYBz8O/1m0+V1Yyyq6kuU+G1SLiTA33JQ++LGa3cjivTh5Y/gjmHYzohH3xxZ9qxH09TNloBlN1bdBg4ChCxr1qOoLUE5m3C44fAV/K1WCNnvQ5dvtQCT95ykLHh+apozZLdIispECWx7kBgsZ2wY0/V6alsgIHHfHipVSe61Wi3TnEwmJklG0l6OxWC7qkjTIk2Rbmg45n2sM1lRVBWmh/FAommRpEcQOgZ87nKwT0Y0TSuFvD2I43M8jWfc9Ax8REqE/6RCSWgadctHwVIytPswiUPwT+y5auyoWDzC/t3f+AEtHUwVOv1q1QAAAABJRU5ErkJggg==")]
 	public class DependencyFixerPlugin : PluginBase
 	{
 		public override IXrmToolBoxPluginControl GetControl()

@@ -6,6 +6,7 @@ obj/
 .vs/
 *.user
 *.suo
-
+.vscode
 # XrmToolBox Plugins (Don't commit the dependencies we manually copied unless necessary, but for this specific fix, we usually exclude the packages folder)
 packages/
+nuget.exe
