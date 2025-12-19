@@ -3,14 +3,12 @@ using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
 using System;
-using System.Data;
-using System.Data.Common;
+using System.Data; 
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using XrmToolBox.Extensibility;
-using XrmToolBox.Extensibility.Interfaces;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using XrmToolBox.Extensibility.Interfaces; 
 
 namespace DesktopFlowDependencyFixer
 {
@@ -35,7 +33,7 @@ namespace DesktopFlowDependencyFixer
 		public new string Name => "Desktop Flow Dependency Fixer";
 		public string Description => "A tool to diagnose and move missing components into a target unmanaged solution.";
 		public string Author => "Oluwafemi Tosin Ajigbayi";
-		public string Version => "1.5.2";
+		public string Version => "1.5.3";
 		public string HelpUrl => "https://github.com/femstac/DesktopFlowDependencyFixer";
 		public string SmallImageBase64 => "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAk1BMVEVHcEwLbrsAa74DhdUijdIEbb4KfMoCeswakNkGbb0Ebr4Ac8YSi9cJZ7EDZrghdroAa701ktBEn9UMfMoBecwOhNAfktgLitksl9kMh9MWhc0Kd8QAfs/d6vQCcMEJfs00kNDy9/v2+vwwh8c/ks4cgMaaxOLR4u5wrdgQjdk/ntmpz+fn8fc3mthJpt6q0+xIpNywMAo0AAAAH3RSTlMAFPz8FKZx9XREdfymBnAG9AYGRf52RfUVp0R3+//+n/R92AAAAJZJREFUGNN1j9cOgzAQBLENLrQQapptML3n/78uInGEeODeZqS9uzWMkwnDI5uua+50oylFKHngv6N9hpb3i0isRZr1wzrOkkQ6T9E8qYLnzhNsfHXRsipVTE0lrMsm7mgYC97ypoJfYZhJnPOua0tog9+SiMi8rksRMH0Fx8QRAgbQ1wJgZgtoMx/szwLLAscynndW+wORYwoKu8gWyAAAAABJRU5ErkJggg==";
 		public string BigImageBase64 => "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABF1BMVEVHcEwkcK5Ll8gGbbwQb7gvkdEQbrgpjc4CabsNcbsOfckkjtMJhtUMarc2k84NbboDbr8Lg9EEb8AekdghkdcRi9gGargDaroDZbcHeMghlNsXkdsGe8wEdMYYh88Pcb0djNInlNcwldYXf8YMcb8QjNkXi9QKhNEEfMsSjNcPfssSgs0niswId8UAbL8AbsAAcMIEhtcChNUDf8/0+PwIidn7/Pzy9fkAc8Xm8PcCfM4Ae80AeMoAdcgBabwNjdr3+/3t8/j9/v0TecFUmsvU5PDg7PQBecsekNYBgdMxltYdfsRgrt5ws90zi8bQ5/NXo9ZQlMbG3Ou51ehard5aqNk9ndeuy+AbhMski89rq9Y8mNJloc31bfpJAAAALnRSTlMABAWHJicVLu5Si1P6LRY72u3qlIjqYpK4ubrt7e6IZGRjPj2W85fb89u5uTvbWVSwsQAAAZhJREFUOMvNk9dSwlAQhokJvQsIdhQLtvRATiohJBB6L+r7P4cbdZREhmv3KjPfv7v/7tkEAv8tDq5yuauDPYJgQRAKwd0sFYbMeIJhEvFAAAun/uSenOav8w8My7L3F88X2SdfndSJruu3AsN0OqzDZTlOevTWCJ/quiAwbHc06nIQknwW9trPfXJnydffZAl4O+Yb5hrqd+b9AUKD/mItt6sVn8k85M9rzVqt0eCNsaIoMU+DYBz8O/1m0+V1Yyyq6kuU+G1SLiTA33JQ++LGa3cjivTh5Y/gjmHYzohH3xxZ9qxH09TNloBlN1bdBg4ChCxr1qOoLUE5m3C44fAV/K1WCNnvQ5dvtQCT95ykLHh+apozZLdIispECWx7kBgsZ2wY0/V6alsgIHHfHipVSe61Wi3TnEwmJklG0l6OxWC7qkjTIk2Rbmg45n2sM1lRVBWmh/FAommRpEcQOgZ87nKwT0Y0TSuFvD2I43M8jWfc9Ax8REqE/6RCSWgadctHwVIytPswiUPwT+y5auyoWDzC/t3f+AEtHUwVOv1q1QAAAABJRU5ErkJggg==";
@@ -121,14 +119,13 @@ namespace DesktopFlowDependencyFixer
 
             // HELP BUTTON CONFIG
             this.tsbHelp.Text = "Help / How-To";
-            this.tsbHelp.Image = null;
             this.tsbHelp.Click += (s, e) => System.Diagnostics.Process.Start(HelpUrl);
 
             // 2. SplitContainer
             this.splitContainer.Dock = DockStyle.Fill;
             this.splitContainer.FixedPanel = FixedPanel.Panel1; 
             this.splitContainer.Orientation = Orientation.Horizontal;
-            this.splitContainer.SplitterDistance = 280;
+            this.splitContainer.SplitterDistance = 380;
             this.Controls.Add(this.splitContainer);
 
             // 3. GroupBox
@@ -145,7 +142,7 @@ namespace DesktopFlowDependencyFixer
             this.tlpInput.RowCount = 6;
             
             // Row Styles
-            this.tlpInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F)); // Instructions 
+            this.tlpInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F)); // Instructions 
             this.tlpInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F)); // ID
             this.tlpInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F)); // Type
             this.tlpInput.RowStyles.Add(new RowStyle(SizeType.Absolute, 35F)); // Solution
