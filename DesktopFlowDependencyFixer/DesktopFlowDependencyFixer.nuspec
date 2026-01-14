@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>DesktopFlowDependencyFixer</id>
-    <version>1.0.2</version> 
+    <version>1.0.3</version> 
     <title>Desktop Flow Dependency Fixer</title>
     <authors>Oluwafemi Tosin Ajigbayi</authors>
     <owners>Oluwafemi Tosin Ajigbayi</owners>
@@ -15,10 +15,10 @@
     <summary>Fixes dependency errors when deploying Desktop Flows.</summary>
     <releaseNotes>
       Initial Release.
-      - Component Type selection (Binary vs Process).
+      - Component Type selection (Binary by default).
       - Dynamic environment metadata loading.
       - Improved UI with SplitContainer layout.
-      - Added Help, instructions and a tooltip that expalins where to find the Component GUID
+      - Added Help, instructions and a tooltip that explains where to find the Component GUID
     </releaseNotes>
     <copyright>Copyright 2025</copyright>
     <tags>XrmToolBox DesktopFlow PowerAutomate ALM</tags>
